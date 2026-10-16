@@ -1,0 +1,169 @@
+:root {
+  --accent: #1d4ed8;
+  --accent-dark: #1e3a8a;
+  --text: #111827;
+  --muted: #4b5563;
+  --bg: #ffffff;
+  --panel: #eef2ff;
+  --good: #166534;
+  --bad: #9a3412;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+[hidden] { display: none !important; }
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 8px 0 4px;
+}
+
+.hint {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.125rem;
+  margin: 0 0 16px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  min-height: 56px;
+  touch-action: manipulation;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--accent-dark);
+  outline-offset: 2px;
+}
+
+.tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.table-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.table-btn .best {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.progress {
+  text-align: center;
+  color: var(--muted);
+  font-size: 1.125rem;
+  margin: 8px 0;
+}
+
+.question {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.answer {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  min-height: 64px;
+  line-height: 64px;
+  margin: 0 auto 8px;
+  max-width: 200px;
+  border-bottom: 4px solid var(--accent);
+}
+
+.feedback {
+  text-align: center;
+  font-size: 1.375rem;
+  font-weight: 700;
+  min-height: 2em;
+  margin: 8px 0;
+}
+
+.feedback.good { color: var(--good); }
+.feedback.bad { color: var(--bad); }
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.keypad button {
+  min-height: 64px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: var(--panel);
+  color: var(--text);
+}
+
+.keypad button:active { background: #c7d2fe; }
+
+.keypad .ok {
+  background: var(--accent);
+  color: #fff;
+}
+
+.keypad button:disabled { opacity: 0.5; }
+
+#result {
+  text-align: center;
+}
+
+.result-message {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 32px 0 8px;
+}
+
+.new-best {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--good);
+  margin: 0 0 16px;
+}
+
+.big {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--accent);
+  color: #fff;
+}
+
+.big.secondary {
+  background: var(--panel);
+  color: var(--accent-dark);
+}
