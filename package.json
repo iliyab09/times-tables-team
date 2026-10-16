@@ -1,0 +1,8 @@
+{
+  "name": "times-tables-team",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  }
+}
